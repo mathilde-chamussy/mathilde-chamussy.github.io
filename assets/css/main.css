@@ -3283,22 +3283,46 @@ input, select, textarea {
 
 /* Uniform titles in Recent Work */
 #work .work-item h3{
-  font-size:1.1em;
-  line-height:1.35;
-  min-height:3em;       /* adjust to match your longest title */
-  margin:0 0 .6em 0;
+	font-size:1.1em;
+	line-height:1.35;
+	min-height:3em;       /* adjust to match your longest title */
+	margin:0 0 .6em 0;
 }
 
+.poptrox-seq{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
 /* make sure poptrox arrows sit over YouTube iframe */
+/* Let the iframe receive clicks */
+.poptrox-popup iframe{
+  position:relative;
+  z-index:3;
+  pointer-events:auto;
+}
+
+/* Keep arrows visible but NOT blocking the video */
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous{
-  z-index: 9999 !important;
-  opacity: .6 !important;
+  width:4rem;                 /* was 50% of popup */
+  z-index:2 !important;       /* under iframe */
+  opacity:.6;
 }
+
 .poptrox-popup:hover .nav-next,
 .poptrox-popup:hover .nav-previous{
-  opacity: 1 !important;
+  opacity:1;
 }
-.poptrox-seq{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* Optional: make only the arrow itself clickable */
+.poptrox-popup .nav-next:before,
+.poptrox-popup .nav-previous:before{
+  pointer-events:auto;
+}
+.poptrox-popup .nav-next,
+.poptrox-popup .nav-previous{
+  pointer-events:none;
+}
+
+
+
 
 
