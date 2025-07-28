@@ -99,11 +99,7 @@
 			$window.on('load', function() {
 
 				$('#work').poptrox({
-					// caption: function($a) { return $a.next('h3').text(); },
-					caption: function ($a) { 
-						return $a.closest('article').find('h3').text() ||
-						$a.find('img').attr('alt') || ''; 
-					},
+					caption: function($a) { return $a.next('h3').text(); },
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',
@@ -113,7 +109,7 @@
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
 					usePopupNav: true,
-					popupLoop: false,
+					popupLoop: true,
 					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
 				});
 
