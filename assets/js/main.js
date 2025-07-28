@@ -105,7 +105,7 @@
 					overlayOpacity: 0.85,
 					popupCloserText: '',
 					popupLoaderText: '',
-					selector: '.work-item a.image.thumb, .work-item a.poptrox-hidden',
+					selector: '.work-item a.image.thumb, .work-item a.poptrox-seq',
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
