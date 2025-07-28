@@ -3289,15 +3289,6 @@ input, select, textarea {
   margin:0 0 .6em 0;
 }
 
-/* make hidden poptrox anchors invisible but still selectable */
-/* .poptrox-hidden{
-  position:absolute;
-  left:-9999px;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-} */
-
 /* make sure poptrox arrows sit over YouTube iframe */
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous{
@@ -3308,4 +3299,6 @@ input, select, textarea {
 .poptrox-popup:hover .nav-previous{
   opacity: 1 !important;
 }
+.poptrox-seq{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
 

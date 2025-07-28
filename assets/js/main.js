@@ -98,21 +98,22 @@
 		// Lightbox gallery.
 			$window.on('load', function() {
 
-				$('#work').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image.thumb, .work-item a.poptrox-seq',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					popupLoop: false,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
+				 $('#work .work-item').each(function () {
+				   const $art = $(this);
+				   $art.poptrox({
+				     caption: function () { return $art.find('h3').text(); },
+				     selector: 'a.image.thumb, a.poptrox-seq',
+				     usePopupCaption: true,
+				     usePopupDefaultStyling: false,
+				     usePopupEasyClose: false,
+				     usePopupNav: true,
+				     popupLoop: false,
+				     overlayColor: '#2c2c2c',
+				     overlayOpacity: 0.85,
+				     popupCloserText: '',
+				     popupLoaderText: '',
+				     windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				   });
+				 });
+			}	
 })(jQuery);
