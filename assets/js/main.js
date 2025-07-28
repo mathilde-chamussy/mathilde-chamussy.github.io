@@ -105,7 +105,7 @@
 					popupCloserText: '',
 					popupLoaderText: '',
 					// selector: '.work-item a.image',
-					selector: '.work-item a.image, .work-item a.poptrox-hidden',
+					selector: '.work-item a.image.thumb, .work-item a.poptrox-hidden',
 					usePopupCaption: true,
 					usePopupDefaultStyling: false,
 					usePopupEasyClose: false,
