@@ -3222,20 +3222,18 @@ input, select, textarea {
 
 /* Custom additions */
 
-#header {
-  text-align: center !important;
-  align-items: center !important;   /* was flex-end */
-}
-
 #header .image.avatar{
-  width: 20rem !important;          /* bigger */
-  height: 20rem !important;
-  margin: 0 auto 2rem auto !important;
-  flex-shrink: 0;
+  display:block;
+  width:20rem !important;
+  height:20rem !important;
+  margin:0 0 2rem auto;
+  flex-shrink:0;
+}
+#header .image.avatar img{
+  width:100% !important;
+  height:100% !important;
+  border-radius:50% !important;
+  object-fit:cover;
+  aspect-ratio:1/1;
 }
 
-#header h1{
-  text-align: center !important;
-  margin: 0;
-  line-height: 1.4;
-}
