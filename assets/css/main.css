@@ -3242,6 +3242,9 @@ input, select, textarea {
   text-align:center !important;
   align-items:center !important;
 }
+
+#header .image.avatar{ pointer-events:none; cursor:default; }
+
 #header .inner{
   margin:0 auto;
   display:flex;
