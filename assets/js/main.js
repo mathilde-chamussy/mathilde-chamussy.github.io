@@ -112,8 +112,9 @@
 				     overlayOpacity: 0.85,
 				     popupCloserText: '',
 				     popupLoaderText: '',
-				     windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				   });
-				 });
-			}	
+					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+					});
+				});
+
+			}); 
 })(jQuery);
