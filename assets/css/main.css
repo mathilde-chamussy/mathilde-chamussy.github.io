@@ -3224,8 +3224,8 @@ input, select, textarea {
 
 #header .image.avatar{
   display:block;
-  width:18rem !important;
-  height:18rem !important;
+  width:24rem !important;
+  height:24rem !important;
   margin:0 auto 2rem auto;
   flex-shrink:0;
 }
