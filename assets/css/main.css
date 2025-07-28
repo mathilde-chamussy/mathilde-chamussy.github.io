@@ -3267,5 +3267,20 @@ input, select, textarea {
   #header h1 br{ display:inline !important; }
 }
 
+/* Keep contact textarea from stretching sideways */
+#three textarea{
+  resize: vertical;      /* or: none; to disable completely */
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Custom minimal additions --- */
+.video-wrap{position:relative;padding-top:56.25%;max-width:900px;margin:0 auto;}
+.video-wrap iframe{position:absolute;inset:0;border:0;width:100%;height:100%;}
+
+.pdf-viewer{width:100%;height:80vh;max-height:900px;border:0;}
+
+.poptrox-hidden{display:none;} /* hides the second anchor in special projects */
 
 
