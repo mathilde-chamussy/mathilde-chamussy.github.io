@@ -3224,9 +3224,9 @@ input, select, textarea {
 
 #header .image.avatar{
   display:block;
-  width:14rem !important;
-  height:14rem !important;
-  margin:0 0 2rem auto;
+  width:18rem !important;
+  height:18rem !important;
+  margin:0 auto 2rem auto;
   flex-shrink:0;
 }
 #header .image.avatar img{
@@ -3236,3 +3236,7 @@ input, select, textarea {
   object-fit:cover;
   aspect-ratio:1/1;
 }
+
+/* Center the heading text under the image */
+#header .inner { text-align:center !important; }
+#header h1{ margin:0; line-height:1.4; }
