@@ -100,7 +100,10 @@
 
 				$('#work').poptrox({
 					// caption: function($a) { return $a.next('h3').text(); },
-					caption: function ($a) { return $a.closest('article').find('h3').text(); },
+					caption: function ($a) { 
+						return $a.closest('article').find('h3').text() ||
+						$a.find('img').attr('alt') || ''; 
+					},
 					overlayColor: '#2c2c2c',
 					overlayOpacity: 0.85,
 					popupCloserText: '',

@@ -3290,12 +3290,22 @@ input, select, textarea {
 }
 
 /* make hidden poptrox anchors invisible but still selectable */
-.poptrox-hidden{
+/* .poptrox-hidden{
   position:absolute;
   left:-9999px;
   width:1px;
   height:1px;
   overflow:hidden;
-}
+} */
 
+/* make sure poptrox arrows sit over YouTube iframe */
+.poptrox-popup .nav-next,
+.poptrox-popup .nav-previous{
+  z-index: 9999 !important;
+  opacity: .6 !important;
+}
+.poptrox-popup:hover .nav-next,
+.poptrox-popup:hover .nav-previous{
+  opacity: 1 !important;
+}
 
