@@ -3289,36 +3289,42 @@ input, select, textarea {
 	margin:0 0 .6em 0;
 }
 
-.poptrox-seq{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+/* Hide extra anchors but keep them selectable */
+.poptrox-seq{
+  position:absolute;
+  left:-9999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
 
-/* make sure poptrox arrows sit over YouTube iframe */
-/* Let the iframe receive clicks */
+/* Let the YouTube iframe receive clicks */
 .poptrox-popup iframe{
   position:relative;
   z-index:3;
   pointer-events:auto;
 }
 
-/* Keep arrows visible but NOT blocking the video */
+/* Arrows visible but not covering the video */
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous{
-  width:4rem;                 /* was 50% of popup */
-  z-index:2 !important;       /* under iframe */
+  width:12%;            /* was 50% */
+  z-index:2 !important; /* below iframe */
   opacity:.6;
+  pointer-events:none;  /* container ignores clicks */
 }
 
 .poptrox-popup:hover .nav-next,
-.poptrox-popup:hover .nav-previous{
-  opacity:1;
-}
+.poptrox-popup:hover .nav-previous{ opacity:1; }
 
-/* Optional: make only the arrow itself clickable */
+/* Only the arrow icon itself is clickable */
 .poptrox-popup .nav-next:before,
 .poptrox-popup .nav-previous:before{
   pointer-events:auto;
 }
-.poptrox-popup .nav-next,
-.poptrox-popup .nav-previous{
+
+/* Caption bar shouldn’t block clicks */
+.poptrox-popup .caption{
   pointer-events:none;
 }
 
