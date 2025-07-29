@@ -3301,37 +3301,39 @@ input, select, textarea {
 /* Let the YouTube iframe receive clicks */
 .poptrox-popup iframe{
   position:relative;
-  z-index:3;
+  z-index:1;
   pointer-events:auto;
 }
 
-/* Arrows visible & clickable, but not covering the video */
+/* Always show arrows & close button, above the iframe */
+.poptrox-popup .nav-next,
+.poptrox-popup .nav-previous,
+.poptrox-popup .closer{
+  z-index:9999 !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+
+/* Make nav hit areas small so they don't block the player */
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous{
-  width:4rem;                 /* narrow hit area */
-  z-index:9999 !important;    /* above iframe */
-  opacity:.85;
-  pointer-events:auto;
+  width:4rem;
+  top:0;
+  bottom:0;
+}
+.poptrox-popup .nav-next{ right:0; }
+.poptrox-popup .nav-previous{ left:0; }
+
+/* Close button sizing (optional, keeps default look) */
+.poptrox-popup .closer{
+  top:0;
+  right:0;
+  width:4em;
+  height:4em;
 }
 
-.poptrox-popup:hover .nav-next,
-.poptrox-popup:hover .nav-previous{
-  opacity:1;
-}
-
-/* Only arrow icon needs clicks */
-.poptrox-popup .nav-next:before,
-.poptrox-popup .nav-previous:before{
-  pointer-events:auto;
-}
-
-/* Caption bar shouldn’t block clicks */
+/* Caption shouldn’t block clicks */
 .poptrox-popup .caption{
   pointer-events:none;
+  z-index:2;
 }
-
-
-
-
-
-
