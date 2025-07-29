@@ -3305,19 +3305,21 @@ input, select, textarea {
   pointer-events:auto;
 }
 
-/* Arrows visible but not covering the video */
+/* Arrows visible & clickable, but not covering the video */
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous{
-  width:12%;            /* was 50% */
-  z-index:2 !important; /* below iframe */
-  opacity:.6;
-  pointer-events:none;  /* container ignores clicks */
+  width:4rem;                 /* narrow hit area */
+  z-index:9999 !important;    /* above iframe */
+  opacity:.85;
+  pointer-events:auto;
 }
 
 .poptrox-popup:hover .nav-next,
-.poptrox-popup:hover .nav-previous{ opacity:1; }
+.poptrox-popup:hover .nav-previous{
+  opacity:1;
+}
 
-/* Only the arrow icon itself is clickable */
+/* Only arrow icon needs clicks */
 .poptrox-popup .nav-next:before,
 .poptrox-popup .nav-previous:before{
   pointer-events:auto;
@@ -3327,6 +3329,7 @@ input, select, textarea {
 .poptrox-popup .caption{
   pointer-events:none;
 }
+
 
 
 
