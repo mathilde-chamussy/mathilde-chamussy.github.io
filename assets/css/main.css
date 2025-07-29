@@ -1136,3 +1136,18 @@ body.is-touch .poptrox-popup .closer{ opacity:1 !important; }
   pointer-events:none;
   z-index:2;
 }
+
+/* === Equal height for project posters === */
+#work .work-item .image.thumb img{
+  width:100%;
+  height:32rem;          /* tweak this number until both look right */
+  object-fit:cover;      /* crop to fill, keeps them same height */
+}
+
+/* Let them grow naturally on phones */
+@media (max-width:736px){
+  #work .work-item .image.thumb img{
+    height:auto;
+    object-fit:contain;
+  }
+}
