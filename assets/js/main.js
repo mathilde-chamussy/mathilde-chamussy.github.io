@@ -103,6 +103,8 @@
 				   $art.poptrox({
 				     caption: function () { return $art.find('h3').text(); },
 				     selector: 'a.image.thumb, a.poptrox-seq',
+					 usePopupCloser: true,
+					 overlayClose: true,
 				     usePopupCaption: true,
 				     usePopupDefaultStyling: false,
 				     usePopupEasyClose: false,
